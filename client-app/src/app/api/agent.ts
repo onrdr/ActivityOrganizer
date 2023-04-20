@@ -1,6 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { Activity } from "../models/activity";
-import { resolve } from "path";
+import { Activity } from "../models/activity"; 
 
 const sleep = (delay: number) => {
     return new Promise(resolve => {
@@ -10,17 +9,17 @@ const sleep = (delay: number) => {
 
 axios.defaults.baseURL = 'http://localhost:5000/api';
 
+const responseBody = <T> (response: AxiosResponse<T>) => response.data;
+
 axios.interceptors.response.use(async response => {
     try {
-        await sleep(1000);
+        await sleep(500);
         return response;
     } catch (error) {
         console.log(error);
         return await Promise.reject(error);
     }
 })
-
-const responseBody = <T> (response: AxiosResponse<T>) => response.data;
 
 const request = {
     get: <T> (url: string) => axios.get<T>(url).then(responseBody),
