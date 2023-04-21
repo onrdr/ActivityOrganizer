@@ -5,8 +5,66 @@ body {
 .ui.inverted.top.fixed.menu {
   background-image: linear-gradient(
     135deg,
-    rgb(24, 42, 115) 0%,
+
+    /*Original Template*/
+    /* rgb(24, 42, 115) 0%,
     rgb(33, 138, 174) 69%,
-    rgb(32, 167, 172) 89%
+    rgb(32, 167, 172) 89%  */
+
+    /*Navy Blue Gradient*/
+      rgb(29, 48, 73) 0%,
+      rgb(63, 98, 136) 50%,
+      rgb(112, 153, 194) 100% 
+
   ) !important;
 }
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
+}
+
+/*home page styles*/
+
+.masthead {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+          135deg,
+
+          /*Steel Blue Gradient*/
+          /* rgb(0, 80, 129) 0%,
+          rgb(56, 121, 169) 50%,
+          rgb(137, 174, 213) 100%   */
+
+          /*Deep Sky Blue Gradient*/
+          /* rgb(46, 92, 109) 0%,
+          rgb(75, 137, 167) 50%,
+          rgb(128, 191, 221) 100%  */
+
+          /*Deep Blue Gradient*/
+          rgb(29, 48, 73) 0%,
+          rgb(63, 98, 136) 50%,
+          rgb(112, 153, 194) 100% 
+         
+  ) !important;
+  height: 100vh;
+}
+
+.masthead .ui.menu .ui.button,
+.ui.menu a.ui.inverted.button {
+  margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+  font-size: 4em;
+  font-weight: normal;
+}
+
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+/*end home page styles*/
