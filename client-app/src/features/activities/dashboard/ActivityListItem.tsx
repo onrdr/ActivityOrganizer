@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { Item, Button, Icon, Segment } from "semantic-ui-react";
 import { Activity } from "../../../app/models/activity";
@@ -15,14 +16,14 @@ export default function ActivityListItem({ activity }: Props) {
             <Item.Image size="tiny" circular src="/assets/user.png" />
             <Item.Content>
               <Item.Header as="a">{activity.title}</Item.Header>
-              <Item.Description>Hosted by Onur</Item.Description>
+              <Item.Description>Hosted by Bob</Item.Description>
             </Item.Content>
           </Item>
         </Item.Group>
       </Segment>
       <Segment>
         <span>
-          <Icon name="clock" /> {activity.date}
+          <Icon name="clock" /> {format(activity.date!, "dd MMM yyyy h:mm aa")}
           <Icon name="marker" /> {activity.venue}
         </span>
       </Segment>
@@ -35,5 +36,5 @@ export default function ActivityListItem({ activity }: Props) {
         />
       </Segment>
     </Segment.Group>
-  );
+  )
 }
