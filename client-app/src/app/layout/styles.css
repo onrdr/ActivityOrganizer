@@ -7,14 +7,14 @@ body {
     135deg,
 
     /*Original Template*/
-    /* rgb(24, 42, 115) 0%,
+    rgb(24, 63, 115) 0%,
     rgb(33, 138, 174) 69%,
-    rgb(32, 167, 172) 89%  */
+    rgb(32, 167, 172) 89% 
 
     /*Navy Blue Gradient*/
-      rgb(29, 48, 73) 0%,
+      /* rgb(29, 48, 73) 0%,
       rgb(63, 98, 136) 50%,
-      rgb(112, 153, 194) 100% 
+      rgb(112, 153, 194) 100%  */
 
   ) !important;
 }
@@ -33,6 +33,11 @@ body {
   background-image: linear-gradient(
           135deg,
 
+          /*Original Template*/
+          rgb(24, 63, 115) 0%,
+          rgb(33, 138, 174) 69%,
+          rgb(32, 167, 172) 89% 
+
           /*Steel Blue Gradient*/
           /* rgb(0, 80, 129) 0%,
           rgb(56, 121, 169) 50%,
@@ -44,10 +49,10 @@ body {
           rgb(128, 191, 221) 100%  */
 
           /*Deep Blue Gradient*/
-          rgb(29, 48, 73) 0%,
+          /* rgb(29, 48, 73) 0%,
           rgb(63, 98, 136) 50%,
           rgb(112, 153, 194) 100% 
-         
+          */
   ) !important;
   height: 100vh;
 }
