@@ -5,6 +5,8 @@ using Application.Core;
 using MediatR;
 using FluentValidation.AspNetCore;
 using FluentValidation;
+using Application.Interfaces;
+using Infrastructure.Security;
 
 namespace API.Extensions;
 
@@ -14,12 +16,14 @@ public static class ApplicationServiceExtensions
     {
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-        services.AddSqlite(config); 
+        services.AddSqlite(config);
         services.AddCorsPolicy();
         services.AddAutoMapper(typeof(MappingProfiles).Assembly);
         services.AddMediatR(typeof(List.Handler));
         services.AddFluentValidationAutoValidation();
         services.AddValidatorsFromAssemblyContaining<Create>();
+        services.AddHttpContextAccessor();
+        services.AddScoped<IUserAccessor, UserAccessor>();
 
         return services;
     }
@@ -35,7 +39,7 @@ public static class ApplicationServiceExtensions
 
     private static IServiceCollection AddCorsPolicy(this IServiceCollection services)
     {
-         services.AddCors(opt =>
+        services.AddCors(opt =>
         {
             opt.AddPolicy("CorsPolicy", policy =>
             {
