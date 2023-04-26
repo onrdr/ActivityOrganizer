@@ -39,11 +39,12 @@ export default class UserStore {
         }
     }
 
-
     logout = () => {
         store.commonStore.setToken(null);
         this.user = null;
-        router.navigate('/');
+        router.navigate('/');        
+        // temporary procaution to prevent data transfer in cache  
+        window.location.reload();
     }
 
     getUser = async () => {
@@ -53,5 +54,13 @@ export default class UserStore {
         } catch (error) {
             console.log(error);
         }
+    }
+
+    setImage = (image: string) => {
+        if (this.user) this.user.image = image;
+    }
+
+    setUserPhoto = (url: string) => {
+        if (this.user) this.user.image = url;
     }
 }

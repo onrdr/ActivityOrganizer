@@ -21,5 +21,5 @@ public class PhotosController : BaseApiController
     public async Task<IActionResult> SetMain(string id)
     {
         return HandleResult(await Mediator.Send(new SetMain.Command { Id = id }));
-    }
+    }    
 }
