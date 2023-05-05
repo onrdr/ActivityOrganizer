@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    ports:
+      - 5000:80
+  
+  client-app:
+    build:
+      context: client-app
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
