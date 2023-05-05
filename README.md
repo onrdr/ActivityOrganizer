@@ -1,12 +1,26 @@
 # ActivityOrganizer
 - This is a Full-Stack Web Project using .Net 7, React 18 and Typescript. 
 
-- It enables users to organize their custom activities.   
+- It enables users to organize their custom activities, participate other activities.   
 
 ## Setup instructions (with Docker) 
 
-- run `docker compose up`
-- (place the seeded users credentials)
+### 1- Clone the repository
+```
+ git clone https://github.com/onrdr/ActivityOrganizer
+```
+
+### 2- Navigate to the API Directory and open the project in your prefered IDE
+```
+ cd ActivityOrganizer
+```
+
+### 3- Open up the terminal run docker compose file
+```
+ docker compose up
+```  
+
+### 3- Go to the adress : localhost:3000
 
 - Login Credentials for you to try the app.
     - user1 : 
