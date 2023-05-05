@@ -10,12 +10,12 @@
  git clone https://github.com/onrdr/ActivityOrganizer
 ```
 
-### 2- Navigate to the API Directory and open the project in your prefered IDE
+### 2- Navigate to the API Directory
 ```
  cd ActivityOrganizer
 ```
 
-### 3- Open up the terminal run docker compose file
+### 3- Run docker compose file
 ```
  docker compose up
 ```  
