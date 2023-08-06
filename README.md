@@ -20,7 +20,7 @@
  docker compose up
 ```  
 
-### 3- Go to the adress : localhost:3000
+### 4- Go to the adress : localhost:3000
 
 - Login Credentials for you to try the app.
     - user1 : 
